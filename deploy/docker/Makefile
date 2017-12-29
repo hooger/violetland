@@ -17,25 +17,32 @@ all:				\
 # Supported Fedora versions
 fedora24-amd64-gcc:
 	mc fedora24-amd64-gcc ./execute-in-container.sh Debug
+	mc fedora24-amd64-gcc ./execute-in-container.sh Debug
 
 fedora25-amd64-gcc:
+	mc fedora25-amd64-gcc ./execute-in-container.sh
 	mc fedora25-amd64-gcc ./execute-in-container.sh
 
 fedora26-amd64-gcc:
 	mc fedora26-amd64-gcc ./execute-in-container.sh
+	mc fedora26-amd64-gcc ./execute-in-container.sh
 
 fedora27-amd64-gcc:
+	mc fedora27-amd64-gcc ./execute-in-container.sh
 	mc fedora27-amd64-gcc ./execute-in-container.sh
 
 
 # Supported Ubuntu versions
 xenial-amd64-gcc:
 	mc xenial-amd64-gcc ./execute-in-container.sh
+	mc xenial-amd64-gcc ./execute-in-container.sh
 
 zesty-amd64-gcc:
 	mc zesty-amd64-gcc ./execute-in-container.sh
+	mc zesty-amd64-gcc ./execute-in-container.sh
 
 artful-amd64-gcc:
+	mc artful-amd64-gcc ./execute-in-container.sh
 	mc artful-amd64-gcc ./execute-in-container.sh
 
 
@@ -43,7 +50,9 @@ artful-amd64-gcc:
 # binary
 windows-amd64-gcc:
 	mc windows-amd64-gcc ./execute-in-container.sh
+	mc windows-amd64-gcc ./execute-in-container.sh
 
 windows-i686-gcc:
+	mc windows-i686-gcc ./execute-in-container.sh
 	mc windows-i686-gcc ./execute-in-container.sh
 
