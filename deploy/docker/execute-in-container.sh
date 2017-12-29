@@ -25,22 +25,22 @@ ERROR_START='\033[0;31m'
 ERROR_END='\033[0m'
 
 if [ "${VIOLETLAND_TARGET}" == "" ]; then
-	(>&2 echo "Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_TARGET'")
+	(>&2 echo -e "${ERROR_START}Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_TARGET'${ERROR_END}")
 	exit 1
 fi
 
 if [ "${VIOLETLAND_CMAKE}" == "" ]; then
-	(>&2 echo "Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_CMAKE'")
+	(>&2 echo -e "${ERROR_START}Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_CMAKE'${ERROR_END}")
 	exit 1
 fi
 
 if [ "${VIOLETLAND_CXX}" == "" ]; then
-	(>&2 echo "Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_CXX'")
+	(>&2 echo -e "${ERROR_START}Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_CXX'${ERROR_END}")
 	exit 1
 fi
 
 if [ "${VIOLETLAND_BUILD_TYPE}" == "" ]; then
-	(>&2 echo "${ERROR_START}Missing environment variable \`VIOLETLAND_BUILD_TYPE'${ERROR_END}")
+	(>&2 echo -e "${ERROR_START}Missing environment variable \`VIOLETLAND_BUILD_TYPE'${ERROR_END}")
 	exit 1
 fi
 
