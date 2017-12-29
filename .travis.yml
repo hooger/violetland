@@ -11,11 +11,8 @@ env:
      - VIOLETLAND_TARGET='fedora24-amd64-gcc'
      - VIOLETLAND_TARGET='fedora25-amd64-gcc'
 
-before_install:
-  - ./deploy/travis-ci/$TARGET/before-install.sh
-
 script:
-  - ./deploy/travis-ci/$TARGET/script.sh
+  - (cd deploy/docker && make $VIOLETLAND_TARGET)
 
 after_success:
- - ./deploy/travis-ci/$TARGET/after-success.sh
+ - #./deploy/travis-ci/$TARGET/after-success.sh
