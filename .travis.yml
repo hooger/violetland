@@ -1,16 +1,15 @@
-language: cpp
+sudo: required
 
-dist: trusty
+services:
+   - docker
 
 env:
   global:
      - secure: "aRxEKBXnGy2PWEYtjVX9wBKFIsX738w44/h+8cJX8Tqr5dUNuJ5SzXqvavjrM8guTi8GMh1DgtTcwYIlc+RbjQ1U6ynFeP4BBveYMhyI/18A4EZsIFjcAQ9oaoqLBl8YR77Lk7GVEEohvRjfbdNfnyldjRQe5rSuI2c7s/xlQAk="
 
   matrix:
-     - TARGET='trusty-amd64-clang'
-     - TARGET='trusty-amd64-gcc'
-     - TARGET='windows-amd64'
-     - TARGET='windows-i686'
+     - VIOLETLAND_TARGET='fedora24-amd64-gcc'
+     - VIOLETLAND_TARGET='fedora25-amd64-gcc'
 
 before_install:
   - ./deploy/travis-ci/$TARGET/before-install.sh
