@@ -16,7 +16,7 @@ all:				\
 
 # Supported Fedora versions
 fedora24-amd64-gcc:
-	mc fedora24-amd64-gcc ./execute-in-container.sh VIOLETLAND_BUILD_TYPE=Debug
+	mc fedora24-amd64-gcc ./execute-in-container.sh Debug
 
 fedora25-amd64-gcc:
 	mc fedora25-amd64-gcc ./execute-in-container.sh

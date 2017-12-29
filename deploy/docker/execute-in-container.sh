@@ -5,6 +5,7 @@
 # proceeds with building Violetland.
 
 
+
 VIOLETLAND_ENVIRONMENT_FILE='/opt/violetland-environment.sh'
 
 
@@ -15,6 +16,8 @@ fi
 
 
 source "${VIOLETLAND_ENVIRONMENT_FILE}"
+
+
 
 
 
@@ -39,10 +42,15 @@ if [ "${VIOLETLAND_CXX}" == "" ]; then
 	exit 1
 fi
 
+
+VIOLETLAND_BUILD_TYPE="${1}"
+
 if [ "${VIOLETLAND_BUILD_TYPE}" == "" ]; then
-	(>&2 echo -e "${ERROR_START}Missing environment variable \`VIOLETLAND_BUILD_TYPE'${ERROR_END}")
+	(>&2 echo -e "${ERROR_START}Missing environment variable \`VIOLETLAND_BUILD_TYPE', has to be passed as first argument to this script${ERROR_END}")
 	exit 1
 fi
+
+
 
 
 
@@ -56,6 +64,8 @@ DIRECTORY_OF_THIS_FILE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 ROOT_DIRECTORY="${DIRECTORY_OF_THIS_FILE}/../.."
 BUILD_DIRECTORY="${ROOT_DIRECTORY}/build/${VIOLETLAND_TARGET}-${VIOLETLAND_BUILD_TYPE}"
 DIST_DIRECTORY="${ROOT_DIRECTORY}/dist/${VIOLETLAND_TARGET}-${VIOLETLAND_BUILD_TYPE}"
+
+
 
 
 
