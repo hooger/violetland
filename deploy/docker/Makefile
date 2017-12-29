@@ -17,42 +17,42 @@ all:				\
 # Supported Fedora versions
 fedora24-amd64-gcc:
 	mc fedora24-amd64-gcc ./execute-in-container.sh Debug
-	mc fedora24-amd64-gcc ./execute-in-container.sh Debug
+	mc fedora24-amd64-gcc ./execute-in-container.sh Release
 
 fedora25-amd64-gcc:
-	mc fedora25-amd64-gcc ./execute-in-container.sh
-	mc fedora25-amd64-gcc ./execute-in-container.sh
+	mc fedora25-amd64-gcc ./execute-in-container.sh Debug
+	mc fedora25-amd64-gcc ./execute-in-container.sh Release
 
 fedora26-amd64-gcc:
-	mc fedora26-amd64-gcc ./execute-in-container.sh
-	mc fedora26-amd64-gcc ./execute-in-container.sh
+	mc fedora26-amd64-gcc ./execute-in-container.sh Debug
+	mc fedora26-amd64-gcc ./execute-in-container.sh Release
 
 fedora27-amd64-gcc:
-	mc fedora27-amd64-gcc ./execute-in-container.sh
-	mc fedora27-amd64-gcc ./execute-in-container.sh
+	mc fedora27-amd64-gcc ./execute-in-container.sh Debug
+	mc fedora27-amd64-gcc ./execute-in-container.sh Release
 
 
 # Supported Ubuntu versions
 xenial-amd64-gcc:
-	mc xenial-amd64-gcc ./execute-in-container.sh
-	mc xenial-amd64-gcc ./execute-in-container.sh
+	mc xenial-amd64-gcc ./execute-in-container.sh Debug
+	mc xenial-amd64-gcc ./execute-in-container.sh Release
 
 zesty-amd64-gcc:
-	mc zesty-amd64-gcc ./execute-in-container.sh
-	mc zesty-amd64-gcc ./execute-in-container.sh
+	mc zesty-amd64-gcc ./execute-in-container.sh Debug
+	mc zesty-amd64-gcc ./execute-in-container.sh Release
 
 artful-amd64-gcc:
-	mc artful-amd64-gcc ./execute-in-container.sh
-	mc artful-amd64-gcc ./execute-in-container.sh
+	mc artful-amd64-gcc ./execute-in-container.sh Debug
+	mc artful-amd64-gcc ./execute-in-container.sh Release
 
 
 # We do not target specific Windows versions but instead a statically linked
 # binary
 windows-amd64-gcc:
-	mc windows-amd64-gcc ./execute-in-container.sh
-	mc windows-amd64-gcc ./execute-in-container.sh
+	mc windows-amd64-gcc ./execute-in-container.sh Debug
+	mc windows-amd64-gcc ./execute-in-container.sh Release
 
 windows-i686-gcc:
-	mc windows-i686-gcc ./execute-in-container.sh
-	mc windows-i686-gcc ./execute-in-container.sh
+	mc windows-i686-gcc ./execute-in-container.sh Debug
+	mc windows-i686-gcc ./execute-in-container.sh Release
 
