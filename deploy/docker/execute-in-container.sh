@@ -19,6 +19,11 @@ source "${VIOLETLAND_ENVIRONMENT_FILE}"
 
 
 # Check whether build environment file script has defined required variables
+#
+# @see https://stackoverflow.com/a/5947802
+ERROR_START='\033[0;31m'
+ERROR_END='\033[0m'
+
 if [ "${VIOLETLAND_TARGET}" == "" ]; then
 	(>&2 echo "Violetland build environment description \`${VIOLETLAND_ENVIRONMENT_FILE}' did not specify \`VIOLETLAND_TARGET'")
 	exit 1
@@ -35,7 +40,7 @@ if [ "${VIOLETLAND_CXX}" == "" ]; then
 fi
 
 if [ "${VIOLETLAND_BUILD_TYPE}" == "" ]; then
-	(>&2 echo "Missing environment variable \`VIOLETLAND_BUILD_TYPE'")
+	(>&2 echo "${ERROR_START}Missing environment variable \`VIOLETLAND_BUILD_TYPE'${ERROR_END}")
 	exit 1
 fi
 
