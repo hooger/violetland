@@ -34,6 +34,11 @@ if [ "${VIOLETLAND_CXX}" == "" ]; then
 	exit 1
 fi
 
+if [ "${VIOLETLAND_BUILD_TYPE}" == "" ]; then
+	(>&2 echo "Missing environment variable \`VIOLETLAND_BUILD_TYPE'")
+	exit 1
+fi
+
 
 
 # Expand and enrich environment variables
@@ -44,8 +49,8 @@ export CXX="${VIOLETLAND_CXX}"
 DIRECTORY_OF_THIS_FILE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 ROOT_DIRECTORY="${DIRECTORY_OF_THIS_FILE}/../.."
-BUILD_DIRECTORY="${ROOT_DIRECTORY}/build/${VIOLETLAND_TARGET}"
-DIST_DIRECTORY="${ROOT_DIRECTORY}/dist/${VIOLETLAND_TARGET}"
+BUILD_DIRECTORY="${ROOT_DIRECTORY}/build/${VIOLETLAND_TARGET}-${VIOLETLAND_BUILD_TYPE}"
+DIST_DIRECTORY="${ROOT_DIRECTORY}/dist/${VIOLETLAND_TARGET}-${VIOLETLAND_BUILD_TYPE}"
 
 
 
@@ -54,10 +59,6 @@ if [ -d "${BUILD_DIRECTORY}" ]; then
 	rm -rf "${BUILD_DIRECTORY}"
 fi
 mkdir -p "${BUILD_DIRECTORY}"
-mkdir -p "${BUILD_DIRECTORY}/debug"
-mkdir -p "${BUILD_DIRECTORY}/release"
 
-
-(cd "${BUILD_DIRECTORY}/debug"		&& $CMAKE -DCMAKE_BUILD_TYPE=Debug	-DCMAKE_INSTALL_PREFIX="${DIST_DIRECTORY}/debug"	"${ROOT_DIRECTORY}" && make && make install) || exit 1
-(cd "${BUILD_DIRECTORY}/release"	&& $CMAKE -DCMAKE_BUILD_TYPE=Release	-DCMAKE_INSTALL_PREFIX="${DIST_DIRECTORY}/release"	"${ROOT_DIRECTORY}" && make && make install) || exit 1
+(cd "${BUILD_DIRECTORY}" && $CMAKE -DCMAKE_BUILD_TYPE="${VIOLETLAND_BUILD_TYPE}" -DCMAKE_INSTALL_PREFIX="${DIST_DIRECTORY}" "${ROOT_DIRECTORY}" && make && make install) || exit 1
 
