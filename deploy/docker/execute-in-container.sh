@@ -75,5 +75,12 @@ if [ -d "${BUILD_DIRECTORY}" ]; then
 fi
 mkdir -p "${BUILD_DIRECTORY}"
 
+
+if [ -d "${DIST_DIRECTORY}" ]; then
+	rm -rf "${DIST_DIRECTORY}"
+fi
+mkdir -p "${DIST_DIRECTORY}"
+
+
 (cd "${BUILD_DIRECTORY}" && $CMAKE -DCMAKE_BUILD_TYPE="${VIOLETLAND_BUILD_TYPE}" -DCMAKE_INSTALL_PREFIX="${DIST_DIRECTORY}" "${ROOT_DIRECTORY}" && make && make install) || exit 1
 
