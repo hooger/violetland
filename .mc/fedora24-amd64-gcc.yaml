@@ -1,0 +1,25 @@
+---
+base: fedora:24
+install:
+ - boost-devel
+ - cmake
+ - make
+ - gcc-c++
+ - SDL-devel
+ - SDL_image-devel
+ - SDL_mixer-devel
+ - SDL_ttf-devel
+ - gettext
+ - which
+---
+#!/bin/bash
+
+
+(sudo tee '/opt/violetland-environment.sh') <<- EOM
+	#!/bin/bash
+
+	export VIOLETLAND_TARGET='fedora24-amd64-gcc'
+	export VIOLETLAND_CMAKE=`which cmake`
+	export VIOLETLAND_CXX=`which g++`
+EOM
+
