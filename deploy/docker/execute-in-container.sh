@@ -3,6 +3,7 @@
 # This script should be executed inside a container provided by mini-cross. It
 # reads the target configuration from {@code /opt/violetland-environment.sh} and
 # proceeds with building Violetland.
+set -e
 
 
 

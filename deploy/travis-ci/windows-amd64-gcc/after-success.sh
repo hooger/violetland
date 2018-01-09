@@ -9,3 +9,4 @@ source "${DIRECTORY_OF_THIS_FILE}/../travis-ci.sh"
 
 # Deploy
 deploy_as_zip
+
