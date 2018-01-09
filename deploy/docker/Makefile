@@ -1,16 +1,36 @@
 # Default Target
-all:				\
-	fedora24-amd64-gcc	\
-	fedora25-amd64-gcc	\
-	fedora26-amd64-gcc	\
-	fedora27-amd64-gcc	\
-				\
-	xenial-amd64-gcc	\
-	zesty-amd64-gcc		\
-	artful-amd64-gcc	\
-				\
-	windows-amd64-gcc	\
-	windows-i686-gcc
+all:					\
+	build-debug			\
+	build-release			\
+
+
+build-debug:				\
+	fedora24-amd64-gcc-debug	\
+	fedora25-amd64-gcc-debug	\
+	fedora26-amd64-gcc-debug	\
+	fedora27-amd64-gcc-debug	\
+					\
+	xenial-amd64-gcc-debug		\
+	zesty-amd64-gcc-debug		\
+	artful-amd64-gcc-debug		\
+					\
+	windows-amd64-gcc-debug		\
+	windows-i686-gcc-debug
+
+
+
+build-release:				\
+	fedora24-amd64-gcc-release	\
+	fedora25-amd64-gcc-release	\
+	fedora26-amd64-gcc-release	\
+	fedora27-amd64-gcc-release	\
+					\
+	xenial-amd64-gcc-release	\
+	zesty-amd64-gcc-release		\
+	artful-amd64-gcc-release	\
+					\
+	windows-amd64-gcc-release	\
+	windows-i686-gcc-release
 
 
 

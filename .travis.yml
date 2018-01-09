@@ -16,7 +16,7 @@ before_install:
 
 script:
   - ./deploy/travis-ci/$VIOLETLAND_TARGET/script.sh
-  - #(cd deploy/docker && make $VIOLETLAND_TARGET)
 
 after_success:
- - #./deploy/travis-ci/$VIOLETLAND_TARGET/after-success.sh
+ - ./deploy/travis-ci/$VIOLETLAND_TARGET/after-success.sh
+
