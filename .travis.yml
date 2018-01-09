@@ -14,7 +14,7 @@ before-install:
   - sudo npm install -g mini-cross
 
 script:
-  - ./deploy/travis-ci/$TARGET/script.sh
+  - ./deploy/travis-ci/$VIOLETLAND_TARGET/script.sh
   - #(cd deploy/docker && make $VIOLETLAND_TARGET)
 
 after_success:
