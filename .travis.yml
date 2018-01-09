@@ -11,6 +11,7 @@ env:
      - VIOLETLAND_TARGET='windows-amd64-gcc'
 
 before_install:
+  - sudo apt-get -y install npm
   - sudo npm install -g mini-cross
 
 script:
