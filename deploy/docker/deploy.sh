@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# Will create a distributable archive given a directory. This script is actually
+# a wrapper forwarding necessary environment variables to Travis CI
 set -e
 
 
