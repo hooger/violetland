@@ -8,5 +8,5 @@ source "${DIRECTORY_OF_THIS_FILE}/../travis-ci.sh"
 
 
 # Build
-(cd "${ROOT_DIRECTORY}/deploy/docker" && make "${TARGET}")
+(cd "${ROOT_DIRECTORY}/deploy/docker" && make "${VIOLETLAND_TARGET}")
 
