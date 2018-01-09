@@ -10,7 +10,7 @@ env:
   matrix:
      - VIOLETLAND_TARGET='windows-amd64-gcc'
 
-before-install:
+before_install:
   - sudo npm install -g mini-cross
 
 script:
