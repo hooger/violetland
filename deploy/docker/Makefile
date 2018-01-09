@@ -18,7 +18,6 @@ build-debug:				\
 	windows-i686-gcc-debug
 
 
-
 build-release:				\
 	fedora24-amd64-gcc-release	\
 	fedora25-amd64-gcc-release	\
@@ -34,45 +33,73 @@ build-release:				\
 
 
 
+
+
 # Supported Fedora versions
-fedora24-amd64-gcc:
+fedora24-amd64-gcc-debug:
 	mc fedora24-amd64-gcc ./execute-in-container.sh Debug
+
+fedora24-amd64-gcc-release:
 	mc fedora24-amd64-gcc ./execute-in-container.sh Release
 
-fedora25-amd64-gcc:
+
+fedora25-amd64-gcc-debug:
 	mc fedora25-amd64-gcc ./execute-in-container.sh Debug
+
+fedora25-amd64-gcc-release:
 	mc fedora25-amd64-gcc ./execute-in-container.sh Release
 
-fedora26-amd64-gcc:
+
+fedora26-amd64-gcc-debug:
 	mc fedora26-amd64-gcc ./execute-in-container.sh Debug
+
+fedora26-amd64-gcc-release:
 	mc fedora26-amd64-gcc ./execute-in-container.sh Release
 
-fedora27-amd64-gcc:
+
+fedora27-amd64-gcc-debug:
 	mc fedora27-amd64-gcc ./execute-in-container.sh Debug
+
+fedora27-amd64-gcc-release:
 	mc fedora27-amd64-gcc ./execute-in-container.sh Release
 
 
+
 # Supported Ubuntu versions
-xenial-amd64-gcc:
+xenial-amd64-gcc-debug:
 	mc xenial-amd64-gcc ./execute-in-container.sh Debug
+
+xenial-amd64-gcc-release:
 	mc xenial-amd64-gcc ./execute-in-container.sh Release
 
-zesty-amd64-gcc:
+
+zesty-amd64-gcc-debug:
 	mc zesty-amd64-gcc ./execute-in-container.sh Debug
+
+zesty-amd64-gcc-release:
 	mc zesty-amd64-gcc ./execute-in-container.sh Release
 
-artful-amd64-gcc:
+
+artful-amd64-gcc-debug:
 	mc artful-amd64-gcc ./execute-in-container.sh Debug
+
+artful-amd64-gcc-release:
 	mc artful-amd64-gcc ./execute-in-container.sh Release
+
 
 
 # We do not target specific Windows versions but instead a statically linked
 # binary
-windows-amd64-gcc:
+windows-amd64-gcc-debug:
 	mc windows-amd64-gcc ./execute-in-container.sh Debug
+
+windows-amd64-gcc-release:
 	mc windows-amd64-gcc ./execute-in-container.sh Release
 
-windows-i686-gcc:
+
+windows-i686-gcc-debug:
 	mc windows-i686-gcc ./execute-in-container.sh Debug
+
+windows-i686-gcc-release:
 	mc windows-i686-gcc ./execute-in-container.sh Release
 
